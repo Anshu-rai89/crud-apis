@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const app = require("../app");
 
 beforeAll(async () => {
-  process.env.JWT_KEY = "asdfasdf";
+  process.env.JWT_SECRET = "asdfasdf";
 
   mongo = new MongoMemoryServer();
   const mongoUri = await mongo.getUri();
